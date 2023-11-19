@@ -1,3 +1,4 @@
+/* Zera as margens e preenchimentos padrão, e define a modelagem da caixa como border-box */
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +6,15 @@
     font-family: sans-serif;
 }
 
+/* Estiliza o corpo da página */
 body {
     min-height: 100vh;
-    background-color: #090c31;
+    background-color: hsl(236, 69%, 11%);
     display: grid;
     place-items: center;
 }
 
+/* Estiliza a calculadora */
 .calculator {
     background-color: #15173c;
     color: white;
@@ -24,6 +27,7 @@ body {
     gap: 0.5rem;
 }
 
+/* Estiliza a tela da calculadora */
 .screen {
     grid-column: 1 / -1;
     background-color: #090c31;
@@ -36,6 +40,7 @@ body {
     font-weight: 600;
 }
 
+/* Estiliza os botões da calculadora */
 .btn {
     background-color: #15173c;
     color: white;
@@ -48,20 +53,28 @@ body {
     cursor: pointer;
 }
 
+/* Estiliza o botão de zero para ter um tamanho menor */
+#zero {
+    font-size: 1rem;
+}
+
+/* Efeito hover nos botões */
 .btn:hover {
     background-color: #090c31;
 }
 
-#zero {
-    grid-column: span 2;
-}
-
+/* Estiliza o botão de igual para ocupar duas linhas e tem uma cor especial */
 #equals {
     grid-row: span 2;
     background-color: #e6394a;
 }
 
+/* Efeito hover no botão de igual */
 #equals:hover {
     background-color: #e65766;
 }
- 
+
+/* Estiliza um ponto maior */
+.larger-dot {
+    font-size: 24px;
+}
