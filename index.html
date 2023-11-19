@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Definição do tipo de documento HTML (HTML5) e declaração da linguagem como inglês -->
+
 <head>
+    <!-- Início do cabeçalho do documento HTML -->
+
     <meta charset="UTF-8">
+    <!-- Configuração da codificação de caracteres como UTF-8, suportando caracteres especiais -->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Especificação do modo de compatibilidade com o Internet Explorer para a última versão disponível -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuração da visualização para dispositivos móveis, ajustando a largura da tela inicialmente para o tamanho do dispositivo -->
+
     <title>Calculator</title>
+    <!-- Definição do título da página exibido na aba do navegador -->
+
     <link rel="stylesheet" href="./css/main.css">
+    <!-- Inclusão da folha de estilo externa "main.css" para aplicar estilos à página -->
+
 </head>
+<!-- Fim do cabeçalho do documento HTML -->
+
 <body>
+    <!-- Início do corpo do documento HTML -->
 
     <div class="calculator">
+        <!-- Div principal que engloba a calculadora -->
 
         <div class="screen">0</div>
+        <!-- Div para exibir a tela da calculadora com valor inicial "0" -->
 
         <button id="c" class="btn">C</button>
+        <!-- Botão com ID "c" e classe "btn" para limpar a calculadora -->
+
         <button id="delete" class="btn">←</button>
+        <!-- Botão com ID "delete" e classe "btn" para excluir o último caractere da entrada -->
+
         <button class="btn">/</button>
+        <!-- Botão de divisão com classe "btn" -->
+
         <button class="btn">*</button>
+        <!-- Botão de multiplicação com classe "btn" -->
+
+        <!-- Botões de números de 7 a 0 -->
         <button class="btn">7</button>
         <button class="btn">8</button>
         <button class="btn">9</button>
@@ -28,12 +56,39 @@
         <button class="btn">1</button>
         <button class="btn">2</button>
         <button class="btn">3</button>
-        <button id="equals" class="btn">=</button>
-        <button id="zero" class="btn">0</button>
-        <button class="btn">.</button>
-    </div>
 
-    
+        <button id="equals" class="btn">=</button>
+        <!-- Botão de igual com ID "equals" e classe "btn" para realizar cálculos -->
+
+        <button id="zero" class="btn">0</button>
+        <!-- Botão zero com ID "zero" e classe "btn" -->
+
+        <button id="dot" class="btn">.</button>
+        <!-- Botão de ponto com ID "dot" e classe "btn" -->
+
+        <div class="blank-space"></div>
+        <!-- Elemento de espaço em branco -->
+
+        <button id="bhaskara" class="btn">∆</button>
+        <!-- Botão com ID "bhaskara" e classe "btn" para ativar o modo Bhaskara -->
+
+        <button id="nextCoefficient" class="btn">PC</button>
+        <!-- Botão com ID "nextCoefficient" e classe "btn" para selecionar o próximo coeficiente -->
+
+        <button id="b" class="btn">B</button>
+        <!-- Botão com ID "b" e classe "btn" -->
+
+        <!-- Botão duplicado com ID "c" e classe "btn" -->
+        <button id="c" class="btn">C</button>
+
+    </div>
+    <!-- Fim da div principal que engloba a calculadora -->
+
     <script src="./js/main.js"></script>
+    <!-- Inclusão do script JavaScript externo "main.js" para adicionar funcionalidades à calculadora -->
+
 </body>
+<!-- Fim do corpo do documento HTML -->
+
 </html>
+<!-- Fim do documento HTML -->
