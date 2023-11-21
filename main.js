@@ -130,21 +130,21 @@ buttons.forEach(button => {
         if (isBhaskaraMode) {
             if (currentCoefficient === 'a') {
                 // Adiciona o dígito ao coeficiente A
-                if (a.length < 13) {
+                if (a.length < 15) {
                     a += pressedButton;
                     currentInput = a;
                     screen.textContent = currentInput;
                 }
             } else if (currentCoefficient === 'b') {
                 // Adiciona o dígito ao coeficiente B
-                if (b.length < 13) {
+                if (b.length < 15) {
                     b += pressedButton;
                     currentInput = b;
                     screen.textContent = currentInput;
                 }
             } else if (currentCoefficient === 'c') {
                 // Adiciona o dígito ao coeficiente C
-                if (c.length < 13) {
+                if (c.length < 15) {
                     c += pressedButton;
                     currentInput = c;
                     screen.textContent = currentInput;
