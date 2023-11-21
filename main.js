@@ -152,6 +152,7 @@ buttons.forEach(button => {
             }
         } else {
             // Se a função Bhaskara não estiver ativada, permite a entrada de números independentemente
+            if (currentInput.length < 15) {
             if (currentInput === "0") {
                 currentInput = pressedButton;
             } else {
