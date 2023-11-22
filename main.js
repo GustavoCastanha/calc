@@ -163,3 +163,12 @@ buttons.forEach(button => {
         }
     });
 });
+document.getElementById('sun').addEventListener('click', function() {
+    document.querySelector('.calculator').classList.add('light-theme');
+    document.body.classList.add('light-theme'); // Adiciona a classe ao corpo da página
+});
+
+document.getElementById('moon').addEventListener('click', function() {
+    document.querySelector('.calculator').classList.remove('light-theme');
+    document.body.classList.remove('light-theme'); // Remove a classe do corpo da página
+});
