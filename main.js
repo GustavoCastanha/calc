@@ -33,10 +33,10 @@ buttons.forEach(button => {
         // Verifica se a seleção do próximo coeficiente está pendente
         if (awaitingCoefficientSelection) {
             // Atualiza o coeficiente atual com base no botão pressionado
-            if (pressedButton === "B") {
+            if (pressedButton === "B" && isBhaskaraMode) {
                 currentCoefficient = 'b';
                 screen.textContent = "Insira o coeficiente B";
-            } else if (pressedButton === "C") {
+            } else if (pressedButton === "C" && isBhaskaraMode) {
                 currentCoefficient = 'c';
                 screen.textContent = "Insira o coeficiente C";
             }
@@ -163,6 +163,7 @@ buttons.forEach(button => {
         }
     });
 });
+
 document.getElementById('sun').addEventListener('click', function() {
     document.querySelector('.calculator').classList.add('light-theme');
     document.body.classList.add('light-theme'); // Adiciona a classe ao corpo da página
