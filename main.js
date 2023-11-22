@@ -36,9 +36,11 @@ buttons.forEach(button => {
             if (pressedButton === "B" && isBhaskaraMode) {
                 currentCoefficient = 'b';
                 screen.textContent = "Insira o coeficiente B";
+                currentInput = ""; // Limpa a entrada para evitar que a letra "B" apareça no visor
             } else if (pressedButton === "C" && isBhaskaraMode) {
                 currentCoefficient = 'c';
                 screen.textContent = "Insira o coeficiente C";
+                currentInput = ""; // Limpa a entrada para evitar que a letra "C" apareça no visor
             }
             awaitingCoefficientSelection = false;
             return;
