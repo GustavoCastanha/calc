@@ -33,14 +33,10 @@ buttons.forEach(button => {
         // Verifica se a seleção do próximo coeficiente está pendente
         if (awaitingCoefficientSelection) {
             // Atualiza o coeficiente atual com base no botão pressionado
-            if (pressedButton === "B" && isBhaskaraMode) {
-                currentCoefficient = 'b';
-                screen.textContent = "Insira o coeficiente B";
-                currentInput = ""; // Limpa a entrada para evitar que a letra "B" apareça no visor
-            } else if (pressedButton === "C" && isBhaskaraMode) {
-                currentCoefficient = 'c';
-                screen.textContent = "Insira o coeficiente C";
-                currentInput = ""; // Limpa a entrada para evitar que a letra "C" apareça no visor
+            if ((pressedButton === "B" || pressedButton === "C") && isBhaskaraMode) {
+                currentCoefficient = pressedButton.toLowerCase();
+                screen.textContent = `Insira o coeficiente ${pressedButton}`;
+                currentInput = ""; // Limpa a entrada para evitar que a letra "B" ou "C" apareça no visor
             }
             awaitingCoefficientSelection = false;
             return;
