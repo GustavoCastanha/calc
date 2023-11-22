@@ -134,6 +134,7 @@ buttons.forEach(button => {
                     screen.textContent = currentInput;
                 }
             } else if (currentCoefficient === 'b') {
+                 isBhaskaraMode = false;
                 // Adiciona o dígito ao coeficiente B
                 if (b.length < 15) {
                     b += pressedButton;
