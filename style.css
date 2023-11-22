@@ -13,8 +13,11 @@ body {
     display: grid;
     place-items: center;
 }
-
-/* Estiliza a calculadora */
+    body.light-theme {
+        background-color: 	#00FFFF; 
+        color: #901616; 
+    }
+/* Estiliza a calculadora para o tema escuro */
 .calculator {
     background-color: #15173c;
     color: white;
@@ -25,10 +28,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
+    position: relative;
 }
 
-/* Estiliza a tela da calculadora */
-.screen {
+/* Estiliza a tela da calculadora para o tema escuro */
+.calculator .screen {
     grid-column: 1 / -1;
     background-color: #090c31;
     padding: 1.5rem;
@@ -40,8 +44,8 @@ body {
     font-weight: 600;
 }
 
-/* Estiliza os botões da calculadora */
-.btn {
+/* Estiliza os botões da calculadora para o tema escuro */
+.calculator .btn {
     background-color: #15173c;
     color: white;
     border: 0;
@@ -53,28 +57,79 @@ body {
     cursor: pointer;
 }
 
-/* Estiliza o botão de zero para ter um tamanho menor */
-#zero {
-    font-size: 1rem;
-}
-
-/* Efeito hover nos botões */
-.btn:hover {
+/* Efeito hover nos botões para o tema escuro */
+.calculator .btn:hover {
     background-color: #090c31;
 }
 
-/* Estiliza o botão de igual para ocupar duas linhas e tem uma cor especial */
-#equals {
+/* Estiliza o botão de igual para o tema escuro */
+.calculator #equals {
     grid-row: span 2;
     background-color: #e6394a;
 }
 
-/* Efeito hover no botão de igual */
-#equals:hover {
+/* Efeito hover no botão de igual para o tema escuro */
+.calculator #equals:hover {
     background-color: #e65766;
 }
 
-/* Estiliza um ponto maior */
-.larger-dot {
-    font-size: 24px;
+/* Estiliza o botão de alternar tema para o tema escuro */
+.theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
 }
+
+/* Estiliza o ícone da lua (tema escuro) */
+.theme-toggle #moon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+/* Estiliza o ícone do sol (tema claro) */
+.theme-toggle #sun {
+    font-size: 24px;
+    color: #ffd700; /* Amarelo mais suave */
+    cursor: pointer;
+}
+
+/* Adiciona um efeito de hover nos ícones */
+.theme-toggle #moon:hover,
+.theme-toggle #sun:hover {
+    transform: scale(1.2);
+}
+
+/* Estiliza a calculadora para o tema claro */
+.calculator.light-theme {
+    background-color: 	#00CED1; 
+    color: #EE82EE; 
+}
+
+/* Estiliza a tela da calculadora para o tema claro */
+.calculator.light-theme .screen {
+    background-color: #48D1CC; 
+    color: #333;
+}
+
+/* Estiliza os botões da calculadora para o tema claro */
+.calculator.light-theme .btn {
+    background-color: #ADD8E6; /* Coral Pearl */
+    color: #333;
+}
+/* Estiliza o botão de igual para o tema claro */
+.calculator.light-theme #equals {
+    background-color: #ff8c8c;
+}
+
+/* Efeito hover no botão de igual para o tema claro */
+.calculator.light-theme #equals:hover {
+    background-color: #ffabab;
+}
+
+/* Estiliza o botão de alternar tema para o tema claro */
+.theme-toggle.light-theme #sun {
+    color: #ffd700;
+}
+
